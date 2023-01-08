@@ -107,7 +107,7 @@ jobs:
         run: git push heroku main
 
       - name: deploy to ubuntu server
-        uses: appleboy/ssh-action@master  #appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.UBUNTU_HOST }}
           username: ${{ secrets.UBUNTU_USERNAME }}
@@ -115,5 +115,5 @@ jobs:
           # port: ${{ secrets.UBUNTU_PORT }}
           script: |
             cd app/src
-            git pull
+            sudo git pull origin main
             echo ${{ secrets.UBUNTU_PASSWORD }} | sudo -S systemctl restart api
