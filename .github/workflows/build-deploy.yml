@@ -116,4 +116,4 @@ jobs:
           script: |
             cd app/src
             git pull
-            sudo systemctl restart api
+            echo ${{ secrets.UBUNTU_PASSWORD }} | sudo -S systemctl restart api
