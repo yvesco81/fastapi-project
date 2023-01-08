@@ -107,7 +107,7 @@ jobs:
         run: git push heroku main
 
       - name: deploy to ubuntu server
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@master   #appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.UBUNTU_HOST }}
           username: ${{ secrets.UBUNTU_USERNAME }}
