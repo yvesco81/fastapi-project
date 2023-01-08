@@ -112,8 +112,8 @@ jobs:
           host: ${{ secrets.UBUNTU_HOST }}
           username: ${{ secrets.UBUNTU_USERNAME }}
           password: ${{ secrets.UBUNTU_PASSWORD }}
-          port: ${{ secrets.UBUNTU_PORT }}
+          # port: ${{ secrets.UBUNTU_PORT }}
           script: |
            cd app/src
-           sudo git pull origin main
+           git pull origin main
            echo ${{ secrets.UBUNTU_PASSWORD }} | sudo -S systemctl restart api
