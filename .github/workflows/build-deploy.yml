@@ -112,7 +112,7 @@ jobs:
           host: ${{ secrets.UBUNTU_HOST }}
           username: ${{ secrets.UBUNTU_USERNAME }}
           password: ${{ secrets.UBUNTU_PASSWORD }}
-          port: 80
+          port: ${{ secrets.UBUNTU_PORT }}
           script: |
            cd app/src
            sudo git pull origin main
