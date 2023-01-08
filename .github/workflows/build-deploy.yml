@@ -114,6 +114,4 @@ jobs:
           password: ${{ secrets.UBUNTU_PASSWORD }}
           # port: ${{ secrets.UBUNTU_PORT }}
           script: |
-            cd app/src
-            sudo git pull origin main
             whoami
