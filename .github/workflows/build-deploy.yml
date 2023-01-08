@@ -115,5 +115,5 @@ jobs:
           port: ${{ secrets.UBUNTU_PORT }}
           script: |
            cd app/src
-           sudo git pull
+           sudo git pull origin main
            echo ${{ secrets.UBUNTU_PASSWORD }} | sudo -S systemctl restart api
