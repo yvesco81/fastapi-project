@@ -29,4 +29,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "succesfully deploy from CI/CD pipeline !!!!"}
+    return {"message": "succesfully deploy from UBUNTU !!!!"}
